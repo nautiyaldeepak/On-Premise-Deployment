@@ -1,0 +1,6 @@
+cd /
+cd /Users/deepaknautiyal/SocialCops/docker-app
+docker stop local_test
+docker rm local_test
+docker build -t pythonapp .
+docker container run -d --name local_test -p 3000:3000 -v
