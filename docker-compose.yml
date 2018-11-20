@@ -1,0 +1,27 @@
+version: '2'
+services:
+  pythonapp:
+    build:
+      context: .
+      dockerfile: app.Dockerfile
+    image: pythonapp-custom
+    ports:
+      - '3000:3000'
+
+  cadvisor_monitor:
+    image: google/cadvisor:latest
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk:ro
+    ports:
+      - '9090:8080'
+  jenkins_update:
+    image: jenkins
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - '8080:8080'
+      - '50000:50000'
