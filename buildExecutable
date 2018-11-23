@@ -1,4 +1,4 @@
 docker stop pyapp
 docker rm pyapp
 docker build -t pythonapp .
-docker container run -d --name pyapp -p 3000:3000 -v
+docker container run -d --name pyapp -p 3000:3000 pythonapp
