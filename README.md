@@ -5,7 +5,7 @@ This project aims to solve on premise deployment problems. A cluster of microser
 
 ## Installation
 - [Docker](https://docs.docker.com/docker-for-mac/install/)<br/>
-- [Docker toobox](https://docs.docker.com/toolbox/toolbox_install_mac/)<br/>
+- [Docker toolbox](https://docs.docker.com/toolbox/toolbox_install_mac/)<br/>
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)<br/>
 - [minikube](https://github.com/kubernetes/minikube)<br/>
 - [kops](https://github.com/kubernetes/kops)<br/>
